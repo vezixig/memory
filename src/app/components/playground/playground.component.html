@@ -1,0 +1,12 @@
+<div class="playground">
+  <ng-template ngFor let-row [ngForOf]="tiles" let-rowIndex="index">
+    <ng-template ngFor let-tile [ngForOf]="row" let-colIndex="index">
+      <app-card
+        [image]="tile.image"
+        [style.grid-row]="(rowIndex) + ' / ' + 'span 1' | safe:'style'"
+        [style.grid-column]="(colIndex+1) + ' / ' + 'span 1' | safe:'style'"
+      >
+      </app-card>
+    </ng-template>
+  </ng-template>
+</div>

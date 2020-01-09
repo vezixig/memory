@@ -1,0 +1,20 @@
+<div class="card__scene">
+  <div
+    class="card__container"
+    (click)="onClick()"
+    [@openClose]="isOpen ? 'closed' : 'open'"
+  >
+    <div
+      class="card__side card__front"
+      [style.background-image]="'url(' + imagePath + image + ')'"
+    ></div>
+    <div
+      class="card__side card__back"
+      [style.background-image]="'url(../../../assets/images/card_back.png)'"
+    ></div>
+    <div class="card__border card__top"></div>
+    <div class="card__border card__bottom"></div>
+    <div class="card__border card__left"></div>
+    <div class="card__border card__right"></div>
+  </div>
+</div>
